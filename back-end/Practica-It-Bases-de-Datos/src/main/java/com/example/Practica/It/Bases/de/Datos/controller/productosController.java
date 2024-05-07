@@ -47,13 +47,13 @@ public class productosController {
 	}
 		
 	@GetMapping("/{id}")
-	public ResponseEntity<Object> findOne(@PathVariable String id){
+	public ResponseEntity<Object> findOne(@PathVariable char id){
 		var productos=productoService.findOne(id);
 		return new ResponseEntity<>(productos,HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/eliminarPermanente/{id}")
-	public ResponseEntity<Object> delete(@PathVariable String id){
+	public ResponseEntity<Object> delete(@PathVariable char id){
 		productoService.delete(id);
 		return new ResponseEntity<>("Registro Eliminado",HttpStatus.OK);
 	}

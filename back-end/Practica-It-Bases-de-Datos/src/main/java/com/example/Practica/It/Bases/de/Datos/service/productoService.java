@@ -12,16 +12,17 @@ import com.example.Practica.It.Bases.de.Datos.interfaceService.IproductoService;
 import com.example.Practica.It.Bases.de.Datos.interfaces.Iproductos;
 import com.example.Practica.It.Bases.de.Datos.model.productos;
 
+
 @Service
 public class productoService implements IproductoService {
     @Autowired
     private Iproductos data;
-
+    
     @Override
-    public String save(productos productos) {
-        Data.save(productos);
-        return productos.getId_productos();
-    }
+	public char save(productos productos) {
+		data.save(productos);
+		return productos.getId_productos();
+	}
 
     @Override
     public List<productos> findAll(){
@@ -31,24 +32,24 @@ public class productoService implements IproductoService {
 
     @Override
     public List<productos> productosActivos() {
-        List<productos> ListaProductosActivos = Data.productosActivos("Habilitado");
-        return ListaPacientesActivos
+        List<productos> ListaProductosActivos =  data.productosActivos("Habilitado");
+        return ListaProductosActivos;
     }
 
     @Override
     public List<productos> filtroProductos(String filtro) {
-        List<productos>Listaproductos=Data.filtroProductos(filtro);
-        return Listaproductos
+        List<productos>Listaproductos=data.filtroProductos(filtro);
+        return Listaproductos;
     }
 
     @Override
-    public Optional<productos> findOne(String id_productos) {
-        Optional<productos> productos=Data.findById(id_productos);
+    public Optional<productos> findOne(char id_productos) {
+        Optional<productos> productos=data.findById(id_productos);
         return productos;
     }
 
     @Override
-    public int delete(String id_productos) {
+    public int delete(char id_productos) {
         data.deleteById(id_productos);
         return 1;
     }
