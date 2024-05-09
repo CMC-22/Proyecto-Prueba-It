@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.containner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    min-height: 80px;
+    background: linear-gradient(
+        90deg,
+        rgba(203,18,133,1)0%,
+        rgba(80,49,145,1)70%    );
+}
+
+.menu {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagen{
+    width: 120px;
+    padding-left: 60px;
+}
+.logo {
+    margin-left: 0px;
+    padding-left: 10px;
+    font-size: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #DEDEDE;
+    display: block;
+    font-weight: bold;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ffffff;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icon {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.fila {
+    padding-left: 100px;
+    padding-right: 200px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between; /* Esto distribuirá los elementos a lo largo de la fila */
+    align-items: center;
+}
+
+.title {
+    margin: 0; /* Quita el margen predeterminado del título */
+}
+
+.enlaces a {
+    
+    margin-left: 10px;
+}
+
+.enlaces span {
+    margin: 0 5px; /* Ajusta el espacio a cada lado del signo "/" según sea necesario */
+}
+
+.filter-row {
+    padding-left: 180px;
+    padding-top: 10px;
+    display: flex; /* Establece la visualización flexible para la fila de filtros */
+    justify-content: space-between; /* Distribuye uniformemente los elementos a lo largo del contenedor */
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+}
+
+.filter-group {
+    flex: 1 0 30%; /* Establece la flexibilidad de los elementos de grupo de filtro */
+    margin-bottom: 10px; /* Establece un margen inferior */
+}
+
+
+@media(max-width:991px){
+    .content {
+        min-height:  70px;
+    }
+
+    .menu {
+        top: 0;
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(203,18,133,1)0%,
+            rgba(80,49,145,1)70%    );
+            display: none;
+    }
+
+    .menu navbar ul li {
+        width: 100px;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+}
+
+
+/*
+estilos de la Tabla
+
+*/
+/* Estilo para la tabla */
+.table {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 100px;
+    border-collapse: collapse;
+}
+
+/* Estilo para las celdas del encabezado */
+.table th {
+    background-color: #e3e1e1;
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para las celdas del cuerpo */
+.table td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+}
+
+/* Estilo para las filas pares */
+.table tbody tr:nth-child(even) {
+    background-color: #e3e1e1;
+}
+
+/* Estilo para las filas impares */
+.table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Estilo para las filas al pasar el cursor */
+.table tbody tr:hover {
+    background-color: #ffffff;
+}
+
+/* Estilo para los botones de acciones */
+.table .acciones button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilo para los botones de acciones al pasar el cursor */
+.table .acciones button:hover {
+    background-color: #0056b3;
+}
