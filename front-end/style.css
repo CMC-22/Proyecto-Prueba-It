@@ -25,7 +25,7 @@ body {
 
 .menu {
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 0;
     right: 0;
     display: flex;
@@ -33,19 +33,17 @@ body {
     justify-content: space-between;
 }
 
-.imagen{
-    width: 120px;
-    padding-left: 60px;
-}
+/* estilos del logo*/
 .logo {
-    margin-left: 0px;
-    padding-left: 10px;
+    margin-left: 100px;
     font-size: 25px;
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
 }
 
+
+/*estilos del la barra o menu*/
 .menu .navbar ul li {
     position: relative;
     float: left;
@@ -67,7 +65,7 @@ body {
     display: none;
 }
 
-.menu-icon {
+.menu-icono {
     width: 25px;
 }
 
@@ -85,10 +83,12 @@ body {
     align-items: center;
 }
 
+/*estilos del titulo  como por ejemplo productos, clientes y ventas*/
 .title {
     margin: 0; /* Quita el margen predeterminado del título */
 }
 
+/*enlaces que estan al lado del titulo*/
 .enlaces a {
     
     margin-left: 10px;
@@ -98,7 +98,10 @@ body {
     margin: 0 5px; /* Ajusta el espacio a cada lado del signo "/" según sea necesario */
 }
 
+
+/*estilos de los demas filtros*/
 .filter-row {
+    margin-right: 110px;
     padding-left: 180px;
     padding-top: 10px;
     display: flex; /* Establece la visualización flexible para la fila de filtros */
@@ -112,10 +115,73 @@ body {
     margin-bottom: 10px; /* Establece un margen inferior */
 }
 
+/* Estilos para los elementos de filtro */
+.filter-group label {
+    font-size: bold; /* Tamaño del texto */
+}
 
+.filter-group input[type="text"],
+.filter-group select {
+    width: 260px; /* Ancho del campo de entrada */
+    padding: 7px; /* Relleno */
+    border: 1px solid #a9a9a9; /* Grosor del borde */
+    border-radius: 7px; /* Radio del borde */
+}
+
+.filter-group select {
+    appearance: none; /* Elimina los estilos nativos del selector */
+    background-color: #ffffff; /* Color de fondo */
+}
+
+/*filtro del rango de fechas*/
+.filter-group .input-container {
+    display: flex;
+}
+
+.filter-group .filter-input {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    width: 260px;
+}
+
+
+/*botones de los filtros*/
+.botones-filtro {
+    padding: 5px 10px; 
+    text-align: right; /* Alinea los botones a la derecha */
+    padding-right: 160px;
+    margin-bottom: 10px;
+}
+
+.botones-filtro button {
+    padding: 5px 10px;
+    font-size: 14px;/*tamaño de la letra*/
+    margin-right: 10px;
+    background-color: #007bff; /* Color azul para el botón "Aplicar Filtro" */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botones-filtro button#limpiar-filtro {
+    background-color: #686767; /* Color gris para el botón "Limpiar Filtro" */
+}
+
+.botones-filtro button:hover {
+    background-color: #0056b3;
+}
+
+.botones-filtro button#limpiar-filtro:hover {
+    background-color: #999; /* Cambia el color gris al hacer hover */
+}
+
+
+
+/*pagina principal*/
 @media(max-width:991px){
     .content {
-        min-height:  70px;
+        min-height:  100px;
     }
 
     .menu {
@@ -150,12 +216,9 @@ body {
 }
 
 
-/*
-estilos de la Tabla
-
-*/
 /* Estilo para la tabla */
 .table {
+    overflow-x: auto;
     padding-top: 10px;
     margin: 0 auto;
     width: 100px;
@@ -167,7 +230,7 @@ estilos de la Tabla
     background-color: #e3e1e1;
     border: 1px solid #ffffff;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 /* Estilo para las celdas del cuerpo */
@@ -203,5 +266,96 @@ estilos de la Tabla
 
 /* Estilo para los botones de acciones al pasar el cursor */
 .table .acciones button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para las acciones */
+.accion {
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+/*estilos para las acciones de la lista*/
+.accion.editar {
+    color: green; /* Color verde para editar */
+}
+
+.accion.eliminar {
+    color: red; /* Color rojo para eliminar */
+}
+
+.accion.desactivar {
+    color: blue; /* Color azul para desactivar */
+}
+
+/* Estilos para el botón "Ver Borrador" */
+.ver-borrador-btn {
+    padding: 5px 10px; /* Espaciado interno */
+    font-size: 12px; /*tamaño de la letra*/
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambio de cursor al pasar */
+}
+
+.ver-borrador-btn:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+
+/*Estilos del formulario*/
+.formulario-container {
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.formulario-columna {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.formulario-columna:last-child {
+    margin-right: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #c7c7c7;
+    border-radius: 4px;
+    box-sizing: border-box; /* Para incluir el padding en el ancho total */
+}
+
+.button-registrar{
+    text-align: center;
+    position: relative;
+    height: 100vh;
+}
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+button:hover {
     background-color: #0056b3;
 }

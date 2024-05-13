@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="content">
             <div class="menu container">
-                <img class="imagen" src="img/carta-a.png">
                 <a href="index.html" class="logo">Shoes Store</a>
                 <input type="checkbox" id="menu" />
                 <label for="menu">
@@ -19,7 +19,7 @@
                 <nav class="navbar">
                     <ul>
                         <li><a href="inicio.html">Inicio</a></li>
-                        <li><a href="servicios.html">Dashboard</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
                         <li><a href="cliente.html">Clientes</a></li>
                         <li><a href="producto.html">Productos</a></li>
                         <li><a href="venta.html">Ventas</a></li>
@@ -31,6 +31,110 @@
         </div>
     </header>
 
-    <h1 class="title">Producto</h1>
+    <div class="fila"> 
+        <h1 class="title">Productos</h1>
+        <div class="enlaces">
+        <a href="inicio.html">Inicio</a>
+        <span>/</span>
+        <a href="crearProducto.html">Agregar Producto</a>
+    </div>
+    </div>
+
+    <br>
+
+    <div class="filter-row">
+        <div class="filter-group">
+            <label for="filter-name">Filtrar por Nombre:</label>
+            <div class="input-container">
+                <input type="text" id="filter-name" class="filter-input" placeholder="Ingrese el nombre"/>
+            </div>
+        </div>
+        <div class="filter-group">
+            <label for="filter-state">Filtrar por Estado:</label>
+            <div class="input-container">
+                <select id="filter-state" class="filter-input">
+                    <option value="">Todos</option>
+                    <option value="ACTIVO">Activo</option>
+                    <option value="INACTIVO">Inactivo</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="botones-filtro">
+        <button id="aplicar-filtro">Aplicar Filtro</button>
+        <button id="limpiar-filtro">Limpiar Filtro</button>
+    </div>
+    
+
+    <!--Tabla de Registro --> 
+
+    <table class="table table-hover">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre Producto</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio</th>
+                <th scope="col">% IVA</th>
+                <th scope="col">% Descuento</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTablaCliente">
+            <tr>
+           <td>1</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>12</td>
+            <td>123</td>
+            <td>234</td>
+            <td>93938</td>
+            <td>Activo</td>
+            <td>
+                <span class="accion editar" title="Editar">
+                    <i class="fas fa-edit"></i>
+                </span>
+                <span class="accion eliminar" title="Eliminar">
+                    <i class="fas fa-trash-alt"></i>
+                </span>
+                <span class="accion desactivar" title="Desactivar">
+                    <i class="fas fa-toggle-off"></i>
+                </span>
+            </td>
+
+        </tr>
+
+<tr>
+            <td>1</td>
+            <td>12345678</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>123456789</td>
+            <td>123</td>
+            <td>100293939</td>
+            <td>Activo</td>
+            <td>
+                <span class="accion editar" title="Editar">
+                    <i class="fas fa-edit"></i>
+                </span>
+                <span class="accion eliminar" title="Eliminar">
+                    <i class="fas fa-trash-alt"></i>
+                </span>
+                <span class="accion desactivar" title="Desactivar">
+                    <i class="fas fa-toggle-off"></i>
+                </span>
+            </td>
+
+</tr>
+
+            <!-- Aquí se insertarán las filas con los datos -->
+           
+        </tbody>
+    </table>
+    
+
 </body>
 </html>

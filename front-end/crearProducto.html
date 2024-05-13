@@ -33,11 +33,11 @@
     </header>
 
     <div class="fila">
-        <h1 class="title">Registro de Clientes</h1>
+        <h1 class="title">Productos</h1>
         <div class="enlaces">
             <a href="inicio.html">Inicio</a>
             <span>/</span>
-            <a href="cliente.html">Lista Clientes</a>
+            <a href="producto.html">Lista Producto</a>
         </div>
     </div>
 
@@ -45,29 +45,16 @@
         <div class="formulario-columna">
             <form id="registroClienteForm">
                 <div class="form-group">
-                    <label for="tipoDocumento">Tipo de Documento:</label>
-                    <select id="tipoDocumento" name="tipoDocumento">
-                        <option selected disabled value="">Selecciona una opción:</option>
-                        <option value="TI">Tarjeta de Identidad</option>
-                        <option value="CC">Cedula de Ciudadania</option>
-                        <option value="P">Pasaporte</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="numeroDocumento">Número de Documento:</label>
+                    <label for="numeroDocumento">Nombre del Producto:</label>
                     <input type="text" id="numeroDocumento" name="numeroDocumento">
                 </div>
                 <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre">
+                    <label for="nombre">Cantidad:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="0">
                 </div>
                 <div class="form-group">
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos" name="apellidos">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="text" id="telefono" name="telefono">
+                    <label for="apellidos">Precio:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="0">
                 </div>
             </form>
         </div>
@@ -75,16 +62,12 @@
         <div class="formulario-columna">
             <form id="registroClienteForm">
                 <div class="form-group">
-                    <label for="ciudad">Ciudad:</label>
-                    <input type="text" id="ciudad" name="ciudad">
+                    <label for="telefono">% IVA:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="0">
                 </div>
                 <div class="form-group">
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" name="direccion">
-                </div>
-                <div class="form-group">
-                    <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="correo">
+                    <label for="ciudad">% Descuento:</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="0">
                 </div>
                 <div class="form-group">
                     <label for="estado">Estado:</label>
